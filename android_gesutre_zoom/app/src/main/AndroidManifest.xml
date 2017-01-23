@@ -21,7 +21,7 @@
 
         <meta-data
             android:name="com.amap.api.v2.apikey"
-            android:value="f3f197e4329c7c63f7e3951f5169da93" />
+            android:value="您的key" />
 
         <activity android:name=".MainActivity">
             <intent-filter>
