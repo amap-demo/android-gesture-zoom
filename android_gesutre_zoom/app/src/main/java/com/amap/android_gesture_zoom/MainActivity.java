@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         mapView.getMap().getUiSettings().setAllGesturesEnabled(true);
+        mapView.getMap().getUiSettings().setScaleControlsEnabled(false);
     }
 
     @Override
