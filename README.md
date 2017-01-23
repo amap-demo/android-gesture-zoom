@@ -1,9 +1,6 @@
 # android-gesture-zoom
 利用自定义手势实现缩放
 
-# android-service-location
-高德定位后台服务的实现
-
 ## 前述 ##
 - [高德官网申请Key](http://lbs.amap.com/dev/#/).
 - 阅读[参考手册](http://a.amap.com/lbs/static/unzip/Android_Map_Doc/index.html).
