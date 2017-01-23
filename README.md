@@ -10,7 +10,7 @@
 ![Screenshot]( https://raw.githubusercontent.com/amap-demo/android-service-location/master/LocationServiceDemo/apk/1477653836.png)  
 
 ## 使用方法##
-###1:配置搭建AndroidSDK工程###
+###配置搭建AndroidSDK工程###
 - [Android Studio工程搭建方法](http://lbs.amap.com/api/android-sdk/guide/creat-project/android-studio-creat-project/#add-jars).
 - [通过maven库引入SDK方法](http://lbsbbs.amap.com/forum.php?mod=viewthread&tid=18786).
 
@@ -18,12 +18,12 @@
 该示例主要演示用于自定义手势完成map的zoom操作
 
 ###实现步骤###
-step1. 通过ScaleGestureDetector获得缩放的scale和焦点
-step2. scaleDelta = Math.log(scale)。利用scale和焦点两个参数利用CameraUpdateFactory.zoomBy触发地图的缩放。
+step1. 通过ScaleGestureDetector获得缩放的scale和焦点<br />
+step2. scaleDelta = Math.log(scale)。利用scale和焦点两个参数利用CameraUpdateFactory.zoomBy触发地图的缩放。<br />
 step2中可以对scaleDelta进行过滤，以忽略误操作。
 
 ###实现原理###
-1.初始化MapView并禁用原声手势
+1.初始化MapView并禁用原生手势
 ```java
  /**
      * 屏蔽map的原生手势
@@ -69,9 +69,9 @@ mMapView.getMap().setOnMapTouchListener(new AMap.OnMapTouchListener() {
 
 ```
 
-3.AbstractScaleGestureListener用于listen获得ScaleGestureDetector的结果。提供了两个子类。
-SimpleScaleGestureListener：检测到手势就进行缩放操作。
-RecommGestureListener：检测到手势后，进行一定的判断，防止误操作。
+3.AbstractScaleGestureListener用于listen获得ScaleGestureDetector的结果。提供了两个子类。<br />
+SimpleScaleGestureListener：检测到手势就进行缩放操作。<br />
+RecommGestureListener：检测到手势后，进行一定的判断，防止误操作。<br />
 建议使用后者，更贴近于地图的原生体验
 ```java
 public class SimpleScaleGestureListener extends AbstractScaleGestureListener {
