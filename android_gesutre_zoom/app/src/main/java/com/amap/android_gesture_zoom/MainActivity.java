@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 
+import com.amap.api.maps.AMap;
 import com.amap.api.maps.MapView;
 /**
  * Author liangchao 2017/01/23
@@ -36,11 +37,10 @@ public class MainActivity extends AppCompatActivity {
 
         mGestureZoomDelegate = new GestureZoomDelegateImpl(this, mMapView.getMap(), IGestureZoomDelegate.RECOMM_MODE);
 
-        mMapView.setOnTouchListener(new View.OnTouchListener() {
+        mMapView.getMap().setOnMapTouchListener(new AMap.OnMapTouchListener() {
             @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                mGestureZoomDelegate.onTouchEvent(event);
-                return true;
+            public void onTouch(MotionEvent motionEvent) {
+                mGestureZoomDelegate.onTouchEvent(motionEvent);
             }
         });
     }
@@ -55,8 +55,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        mapView.getMap().getUiSettings().setAllGesturesEnabled(true);
-        mapView.getMap().getUiSettings().setScaleControlsEnabled(false);
+        mapView.getMap().getUiSettings().setAllGesturesEnabled(false);
     }
 
     @Override
