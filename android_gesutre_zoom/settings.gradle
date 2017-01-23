@@ -1,0 +1,3 @@
+include ':app'
+////include ':aMapSDKV2'
+//project(":aMapSDKV2").projectDir=new File("/Users/liangchao_suxun/Desktop/AMapProjs/AndroidMapSDK3D/AndroidMapSDK3D")
