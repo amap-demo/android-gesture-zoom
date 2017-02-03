@@ -4,10 +4,10 @@
 ## 前述 ##
 - [高德官网申请Key](http://lbs.amap.com/dev/#/).
 - 阅读[参考手册](http://a.amap.com/lbs/static/unzip/Android_Map_Doc/index.html).
-- 工程基于高德地图Android定位SDK实现
+- 工程基于高德地图Android地图SDK实现
 
 ## 扫一扫安装##
-![Screenshot]( https://raw.githubusercontent.com/amap-demo/android-service-location/master/LocationServiceDemo/apk/1477653836.png)  
+![Screenshot](https://raw.githubusercontent.com/amap-demo/android-gesture-zoom/master/android_gesutre_zoom/apk/1486093135.png)  
 
 ## 使用方法##
 ###配置搭建AndroidSDK工程###
